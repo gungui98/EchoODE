@@ -1,0 +1,144 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN""http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-WCTVDFFNBW"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-WCTVDFFNBW');
+    </script>
+    <title>EchoODE</title>
+    <!-- Fonts and stuff -->
+    <link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:400italic,700italic,800italic,400,700,800'
+          rel='stylesheet' type='text/css'/>
+    <link rel="stylesheet" type="text/css" href="css/project.css" media="screen"/>
+    <link rel="stylesheet" type="text/css" media="screen" href="css/iconize.css"/>
+
+    <!-- 🚨 REQUIRED: Web Components polyfill to support Edge and Firefox < 63 -->
+    <script src="https://unpkg.com/@webcomponents/webcomponentsjs@2.1.3/webcomponents-loader.js"></script>
+
+    <!-- 💁 OPTIONAL: Intersection Observer polyfill for better performance in Safari and IE11 -->
+    <script src="https://unpkg.com/intersection-observer@0.5.1/intersection-observer.js"></script>
+
+    <!-- 💁 OPTIONAL: Resize Observer polyfill improves resize behavior in non-Chrome browsers -->
+    <script src="https://unpkg.com/resize-observer-polyfill@1.5.1/dist/ResizeObserver.js"></script>
+
+
+</head>
+
+<body>
+<div id="content">
+    <div class="section logos">
+        <a target="_blank"><img width="5%" src="./images/logo_uet.png"></a>
+        <a target="_blank"><img width="25%" src="./images/logo_vishc.svg"></a>
+    </div>
+
+    <div class="section head">
+        <h1>Echocardiography Segmentation Using Neural
+            ODE-based Diffeomorphic Registration Field</h1>
+
+        <div class="authors">
+            <a href="https://gungui98.github.io/" target="_blank" class="textLink">Phi V. Nguyen (1)</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <a href="https://huyhieupham.github.io/" target="_blank" class="textLink">Hieu H. Pham (2)</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <a href="https://scholar.google.com.vn/citations?user=xnnOvh4AAAAJ&hl=en" target="_blank" class="textLink">Long Q. Tran (1)</a>&nbsp;&nbsp;&nbsp;&nbsp;
+        </div>
+
+        <div class="affiliations">
+            <a href="https://uet.vnu.edu.vn/" target="_blank">University of Engineering and Technology, Vietnam National University</a>&nbsp;&nbsp;
+            <a href="https://smarthealth.vinuni.edu.vn/" target="_blank">The VinUni-Illinois Smart Health Center (VISHC), VinUniversity (VinUni) </a>&nbsp;&nbsp;
+        </div>
+
+        <!-- <div class="venue"><a href="https://cvpr2022.thecvf.com/" target="_blank">CVPR 2022</a> -->
+        </div>
+    </div>
+
+    <div id="content-inner">
+        <div class="section abstract">
+
+            <div class="section demo">
+                <center>
+                    <img src="./images/demo.png" width=80%>
+                </center>
+            </div>
+
+            <div class="section downloads">
+                <center>
+                    <ul>
+                        <li class="grid">
+                            <div class="griditem">
+                                <a href="pub/paper.pdf" target="_blank"
+                                   class="imageLink"><img src="images/paper_thumb.png"></a><br>
+                                Paper<br><a href="pub/cvpr2022_NODEO_paper.pdf"
+                                            target="_blank">PDF</a>
+                            </div>
+                        </li>
+
+
+                        <!-- <li class="grid">
+                            <div class="griditem">
+                                <a href="pub/cvpr2022_NODEO_poster.pdf" target="_blank"
+                                   class="imageLink"><img src="images/poster_thumb.png"></a><br>
+                                Poster<br><a href="pub/cvpr2022_NODEO_poster.pdf"
+                                             target="_blank">PDF</a>
+                            </div>
+                        </li> -->
+
+                        <li class="grid">
+                            <div class="griditem">
+                                <a target="_blank" class="imageLink">
+                                    <img src="images/code.png">
+                                </a><br>
+                                Code<br>
+                                <a href="https://github.com/gungui98/EchoODE" target="_blank">Github</a>
+                            </div>
+                        </li>
+                    </ul>
+                </center>
+            </div>
+
+
+            <div class="section abstract">
+                <h2>Abstract</h2>
+                <p>
+                    Convolutional neural networks (CNN) have recently proven its excellent ability to segment 2D cardiac ultrasound images. In spite of this, the majority of attempts to perform fully sequence segmentation of cardiac ultrasound videos continue to rely on models trained on end-diastole (ED) and end-systole (ES) images instead of directly extracting temporal features from a sequence of cardiac ultrasound images. In this work, we consider the estimation of temporal information between ultrasound images as a registration estimation problem and then presents a novel and accurate method for diffeomorphic image temporal extraction using neural ordinary differential equations (NODEs) to extract temporal information as registration field. In particular, we consider the problem of the registration field as a discrete vector field between frames and formulate it as a continuous trajectory estimation . The estimated registration field is then applied to the segmentation mask in order to segment a whole cardiac cycle. We conduct comprehensive experiments on the CAMUS dataset and the results show that the proposed method surpasses the prior state-of-the-art (SOTA) on multiple evaluation metrics with major margins. These results indicate that spatial temporal data processing is necessary for the implementation of NODES in medical imaging applications and open up new research directions to solve the echocardiography segmentation tasks.
+            </div>
+
+            <!-- <div class="section abstract">
+                <h2>Overview Video</h2>
+                <center>
+                    <iframe width="720" height="405"
+                            src="https://www.youtube.com/embed/rOQjJYEElH0"
+                            frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen>
+                    </iframe>
+                </center>
+            </div> -->
+
+
+            <br/><br/><br/>
+
+
+            <div class="section list">
+                <h2>Citation</h2>
+                <div class="section bibtex">
+                    <center>
+                            <pre>@InProceedings{Wu_2022_CVPR,
+    author    = {Wu, Yifan and Jiahao, Tom Z. and Wang, Jiancong and Yushkevich, Paul A. and Hsieh, M. Ani and Gee, James C.},
+    title     = {NODEO: A Neural Ordinary Differential Equation Based Optimization Framework for Deformable Image Registration},
+    booktitle = {Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR)},
+    month     = {June},
+    year      = {2022},
+    pages     = {20804-20813}
+}</pre>
+                    </center>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+</body>
+
+</html>
